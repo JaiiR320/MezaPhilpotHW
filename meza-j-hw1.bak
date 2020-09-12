@@ -49,14 +49,13 @@
 (define-struct date (month day year))
 ;; Date is a (make-date day month year)
 ;; represents a date, where
-;; day is the day [1,30]
-;; month is the month [1,12]
+;; day is the day
+;; month is the month
 ;; year is the year
 ;;examples
 (define SEPT9 (make-date 9 9 2020))
 (define OCT3 (make-date 10 3 2020))
 (define JAN1 (make-date 1 1 2021))
-
 
 (define-struct reservation (restaurant name phone date party))
 ;; Reservation is a (make-reservation Restaurant name phone Date party)
@@ -64,7 +63,7 @@
 ;; Restaurant is a restaurant
 ;; name is the person's name
 ;; phone is the persons phone numher
-;; Date is a Date
+;; Date is a date
 ;; party is the party size
 
 ;;examples
@@ -103,6 +102,7 @@
 
 (check-expect (reservation-OK? SALLY-RES SEPT9) true)
 (check-expect (reservation-OK? (add-to-party SALLY-RES 400) SEPT9) false)
+
 
 (define (reservation-OK? reserv day)
   (if (or (precedes? day (reservation-date reserv)) (> (reservation-party reserv) (restaurant-capacity (reservation-restaurant reserv))))

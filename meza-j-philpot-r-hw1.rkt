@@ -1,7 +1,10 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-beginner-reader.ss" "lang")((modname philpot-r-hw1) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname meza-j-philpot-r-hw1) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
 ;; Robert Philpot
+;; rphilpot
+;; Jair Meza
+;; jdmeza
 
 ;;1).
 ;; signature: Restaurant is a make-Restaurant String String Natural Natural Boolean -> Restaurant
