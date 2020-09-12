@@ -16,18 +16,18 @@
 ;;constructor
 ;; make-Restaurant: String String Natural Natural Boolean
 ;;selector:
-;; Restaurant-restaurant-name -> String
+;; restaurant-name: Restaurant -> String
 ;; restaurant-name consumes Restaurant and produces the name of restaurant
-;; Restaurant-food-type -> String
+;; food-type: Restaurant -> String
 ;; food-type consumes Restaurant and produces the type of food restaurant provides
-;; Restaurant-table-count -> Natural
+;; table-count: Restaurant -> Natural
 ;; table-count consumes Restaurant and produces the number of tables at restaurant
-;; Restaurant-total-capacity -> Natural
+;; total-capacity: Restaurant -> Natural
 ;; total-capacity consumes Restaurant and produces the capacity number at restaurant
-;; Restaurant-vegetarian-option -> Boolean
+;; vegetarian-option: Restaurant -> Boolean
 ;; vegetarian-option consumes Restaurant and produces true if Restaurant provides vegetarian option and false otherwise
 ;;predicate:
-;;Restaurant? type -> Boolean
+;;Restaurant-anytype -> Boolean
 
 ;;
 
@@ -41,14 +41,12 @@
    ))
 
 ;;4).
-;; signature: Date is a make-Date month day year -> Date
 (define-struct Date(month day year))
 
 (define 01/05/2021 (make-Date 01 05 2021))
 (define 11/21/2021 (make-Date 11 21 2021))
 (define 11/21/1998 (make-Date 11 21 1998))
 
-;; signature: Reservation is a make-Reservation Restaurant String Natural Date Natural -> Reservation
 (define-struct Reservation (restaurant name phone-number date party))
 
 (define Robby(make-Reservation Herradura "Robby Philpot" 9999999999 01/05/2021 4))
@@ -56,12 +54,12 @@
 (define Jessica (make-Reservation Olive-Garden "Jessica Gould" 9214877761 11/21/1998 11))
 
 ;;5).
-;; signature: add-to-party consumes reservation number -> Reservation
 (define (add-to-party reservation number)
   (make-Reservation (Reservation-restaurant reservation) (Reservation-name reservation) (Reservation-phone-number reservation) (Reservation-date reservation) (+ (Reservation-party reservation) number)))
 
 ;;6).
-;; signature: precedes? consumes date1 date2 -> boolean
+;;(< (+ (+ (* (Date-year date1) 10000) (* (Date-month date1) 100)) (Date-year date1))
+;;   (+ (+ (* (Date-year date2) 10000) (* (Date-month date2) 100)) (Date-year date2)))
 (define (precedes? date1 date2)
   (cond
     [(< (Date-year date1) (Date-year date2)) #true]
@@ -70,7 +68,6 @@
     [else #false]))
 
 ;;7).
-;; signature: reservation-OK? consumes reservation date -> boolean
 (define (reservation-OK? reservation date)
   (precedes? (Reservation-date reservation) date))
   
