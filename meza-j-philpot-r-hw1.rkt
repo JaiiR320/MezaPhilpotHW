@@ -9,6 +9,13 @@
 ;;1).
 ;; signature: Restaurant is a make-Restaurant String String Natural Natural Boolean -> Restaurant
 (define-struct Restaurant (restaurant-name food-type table-count total-capacity vegetarian-option))
+;; Restaurant is a (make-restaurant name type tables capacity veg?)
+;; interp. represents a restaurant where
+;; restaurant-name is the name of the establishment
+;; food-type is the type of food (italian, mexican, american, bbq etc.)
+;; table-count is the number of tables
+;; total-capacity is how many seats there are
+;; vegetarian-option is whether or not it has vegetarian options
 
 (define Herradura (make-Restaurant "Herradura" "Mexican" 12 60 #true))
 (define Five-Guys(make-Restaurant "Five Guys" "American" 8 32 #false))
@@ -38,7 +45,11 @@
 ;;
 
 ;;3).
-;; signature: restaurant-type consumes restaurant -> String
+;; signature: restaurant-type: Restaurant -> String
+;; consumes a Restaurant and produces a String, where String is
+;; "event venue" if tables >= 30 and capacity >= 250
+;; "vegetarian-friendly" if there are veg options
+;; food-type, where food-type is the original kind if neither of these apply
 (define (restaurant-type restaurant)
   (cond
    [(and (>= (Restaurant-table-count restaurant) 30) (>= (Restaurant-total-capacity restaurant) 250)) "event venue"]
@@ -53,6 +64,11 @@
 ;;4).
 ;; signature: Date is a make-Date month day year -> Date
 (define-struct Date(month day year))
+;; Date is a (make-date day month year)
+;; represents a date, where
+;; day is the day [1,30]
+;; month is the month [1,12]
+;; year is the year
 
 (define 01/05/2021 (make-Date 01 05 2021))
 (define 11/21/2021 (make-Date 11 21 2021))
@@ -62,8 +78,15 @@
 (define OCT3 (make-Date 10 3 2020))
 (define JAN1 (make-Date 1 1 2021))
 
-;; signature: Reservation is a make-Reservation Restaurant String Natural Date Natural -> Reservation
+;; make-Reservation: Restaurant String Natural Date Natural -> Reservation
 (define-struct Reservation (restaurant name phone-number date party))
+;; Reservation is a (make-reservation restaurant name phone-number date party)
+;; represents a reservation where
+;; Restaurant is a restaurant
+;; name is the person's name
+;; phone is the persons phone numher
+;; Date is a Date
+;; party is the party size
 
 (define Robby(make-Reservation Herradura "Robby Philpot" 9999999999 01/05/2021 4))
 (define Nathan (make-Reservation Five-Guys "Nathan Schmidtt" 9312245087 11/21/2021 7))
@@ -74,7 +97,9 @@
 (define WILL-RES (make-Reservation TECH "Will" "465-846-5913" JAN1 8))
 
 ;;5).
-;; signature: add-to-party consumes reservation number -> Reservation
+;; add-to-party: reservation number -> Reservation
+;; consumes a Reservationa and a number and adds produces a reservation with increased party size based off the number
+
 (define (add-to-party reservation number)
   (make-Reservation (Reservation-restaurant reservation) (Reservation-name reservation) (Reservation-phone-number reservation) (Reservation-date reservation) (+ (Reservation-party reservation) number)))
 
@@ -83,7 +108,9 @@
 (check-expect (add-to-party SALLY-RES 2) (make-Reservation TECH "Sally" "401-123-0428" SEPT9 12))
 
 ;;6).
-;; signature: precedes? consumes date1 date2 -> boolean
+;; precedes?: date1 date2 -> Boolean
+;; consumes a date and a date and produces true if the first date precedes the second, and false if it does not
+
 (define (precedes? date1 date2)
   (cond
     [(< (Date-year date1) (Date-year date2)) #true]
@@ -97,7 +124,9 @@
 (check-expect (precedes? SEPT9 SEPT10) true)
 
 ;;7).
-;; signature: reservation-OK? consumes reservation date -> boolean
+;; reservation-OK?: reservation date -> boolean
+;; consumes a Reservation and a Date and produces false if the date precedes the reservation date, or if party is greater than capacity
+
 (define (reservation-OK? reserv day)
   (if (or (precedes? day (Reservation-date reserv)) (> (Reservation-party reserv) (Restaurant-total-capacity (Reservation-restaurant reserv))))
       false
