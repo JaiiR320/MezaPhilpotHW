@@ -31,3 +31,21 @@
 (define CLEAN-PARK (make-volunteer-org "Park Cleaning" "Clean Park" 18 false true 2 16 EN))
 (define SAVE-THE-BAY (make-volunteer-org "Save The Bay" "Bay Area Restoration" 14 true false 0 8 EN-KR))
 
+;;2).
+;; volunteer-org-fcn: a-volunteer-org -> ...
+; (define (volunteer-org-fcn a-volunteer-org)
+;  (... (volunteer-org-kind a-volunteer-org)
+;       (volunteer-org-name a-volunteer-org)
+;       (volunteer-org-age a-volunteer-org)
+;       (volunteer-org-consent? a-volunteer-org)
+;       (volunteer-org-license? a-volunteer-org)
+;       (volunteer-org-training a-volunteer-org)
+;       (volunteer-org-hours a-volunteer-org)
+;       (volunteer-org-languages a-volunteer-org)))
+
+;; fcn-for-los: los -> ...
+; (define (fn-for-los los)
+;  (cond [(empty? los) ...]
+;        [else
+;         (... (first los)
+;              (fn-for-los (rest los)))]))
