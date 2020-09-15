@@ -49,7 +49,7 @@
 ;;3).
 ;; ListOfVolunteerOrg is one of:
 ; empty
-; (cons a-volunteer-org ListOfVolunteerOrg)
+; (cons volunteer-org ListOfVolunteerOrg)
 
 (Define ListOfVolunteerOrg1 (cons ORG1 (cons ORG2 (cons ORG3 empty))))
 (Define ListOfVolunteerOrg2 (cons ORG3 (cons ORG4 (cons ORG5 empty))))
@@ -65,14 +65,6 @@
 ;; fcn-for-ListOfVolunteerOrg: ListOfVolunteerOrg -> ...
 ; (define (fn-for-ListOfVolunteerOrg ListOfVolunteerOrg)
 ;  (cond [(empty? ListOfVolunteerOrg) ...]
-;        [else
-;         ((... (volunteer-org-kind (first ListOfVolunteerOrg))
-;          (... (volunteer-org-name (first ListOfVolunteerOrg))
-;          (... (volunteer-org-age (first ListOfVolunteerOrg))
-;          (... (volunteer-org-consent (first ListOfVolunteerOrg))
-;          (... (volunteer-org-license (first ListOfVolunteerOrg))
-;          (... (volunteer-org-training (first ListOfVolunteerOrg))
-;          (... (volunteer-org-hours (first ListOfVolunteerOrg))
-;          (... (volunteer-org-languages (first ListOfVolunteerOrg)))
-;         (fn-for-ListOfVolunteerOrg (rest ListOfVolunteerOrg)))]))
+;        [(cons? ListOfVolunteerOrg) (...   (volunteer-org-fcn (first ListOfVolunteerOrg))
+;                                           (fn-for-ListOfVolunteerOrg (rest ListOfVolunteerOrg))]))
 
