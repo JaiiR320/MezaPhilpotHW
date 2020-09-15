@@ -51,9 +51,9 @@
 ; empty
 ; (cons volunteer-org ListOfVolunteerOrg)
 
-(Define ListOfVolunteerOrg1 (cons ORG1 (cons ORG2 (cons ORG3 empty))))
-(Define ListOfVolunteerOrg2 (cons ORG3 (cons ORG4 (cons ORG5 empty))))
-(Define ListOfVolunteerOrg3 (cons ORG1 (cons ORG5 empty)))
+(define ListOfVolunteerOrg1 (cons ORG1 (cons ORG2 (cons ORG3 empty))))
+(define ListOfVolunteerOrg2 (cons ORG3 (cons ORG4 (cons ORG5 empty))))
+(define ListOfVolunteerOrg3 (cons ORG1 (cons ORG5 empty)))
 
 ;;4).
 
@@ -68,3 +68,20 @@
 ;        [(cons? ListOfVolunteerOrg) (...   (volunteer-org-fcn (first ListOfVolunteerOrg))
 ;                                           (fn-for-ListOfVolunteerOrg (rest ListOfVolunteerOrg))]))
 
+;;5).
+;; Constant defined as youngest age in highschool and also minimum age required for highschool student to be a volunteer
+(define MINIMUM-AGE 13)
+
+;; Helper fcn
+;;hs-eligible: a-volunteer-org -> Natural
+;;consumes a volunteer organization and produces 1 if minimum age requirement less than or equal to 13 and 0 if minimum age requirement greater than 13
+(define (hs-eligible a-volunteer-org)
+  (if (<= (volunteer-org-age a-volunteer-org) MINIMUM-AGE) 1 0))
+
+;;count-hs-eligible: a-ListOfVolunteerOrg -> Natural
+;;consumes a list of volunteer organizations and produces the count of orgs that have a minimum age requirement lower than 13
+(define (count-hs-eligible a-ListOfVolunteerOrg)
+  (cond
+    [(empty? a-ListOfVolunteerOrg) 0]
+    [else
+     (+ (hs-eligible (first a-ListOfVolunteerOrg)) (count-hs-eligible (rest a-ListOfVolunteerOrg)))]))
