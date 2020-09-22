@@ -1,17 +1,23 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-beginner-reader.ss" "lang")((modname mez-j-philpot-r-hw3) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname meza-j-philpot-r-hw3) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;Jair Meza
+;jdmeza
+;Robert Philpot
+;rphilpot
+
+
 ;;1).
 ;; volunteer-org is a (make-volunteer-org String String Natural Boolean Boolean Number Number alos)
 ; kind is a string (animal shelter, nursing home, soup kitchen, etc.)
 ; name is the name of volunteer organization
 ; age is minimum age requirement
 ; consent is either:
-;  true- volunteer is under age of 18 and requires parental consent
-;  false- volunteer does not need parental consent
+;  true - volunteer is under age of 18 and requires parental consent
+;  false - volunteer does not need parental consent
 ; license is either:
-;  true- volunteer has valid driver's license
-;  false- volunteer does not have valid driver's license
+;  true - volunteer has valid driver's license
+;  false - volunteer does not have valid driver's license
 ; training is the required hours of training
 ; hours is the minimum number of hours volunteer must work per week
 ; languages is a list of languages spoken by clients of organization
@@ -21,10 +27,10 @@
 ; - empty
 ; - (cons String ListOfStrings)
 
-(define ORG1(make-volunteer-org "animal shelter" "Barkmeow" 18 false false 10 14 (cons "Chalcatongo Mixtec"(cons "Arabic" empty))))
+(define ORG1(make-volunteer-org "animal shelter" "Barkmeow" 18 false false 10 14 (cons "Chalcatongo Mixtec"(cons "Spanish" empty))))
 (define ORG2(make-volunteer-org "soup kitchen" "Expensive Soup" 16 true false 0 19 empty))
 (define ORG3(make-volunteer-org "nursing home" "Old People Home" 2 false true 0 100 (cons "English"(cons "Pig Latin" (cons "Pig Latin 2.0" empty)))))
-(define ORG4(make-volunteer-org "soup kitchen" "Cake only Soup Kitchen" 90 true false 24 72 (cons "English" empty)))
+(define ORG4(make-volunteer-org "soup kitchen" "Cake only Soup Kitchen" 90 true false 24 72 (cons "Spanish" empty)))
 (define ORG5(make-volunteer-org "habitat conservation" "GEICO" 20 true true 999 10 (cons "German" (cons "Arabic" (cons "Pig Latin" empty)))))
 
 ;;2).
@@ -85,3 +91,60 @@
     [(empty? a-ListOfVolunteerOrg) 0]
     [else
      (+ (hs-eligible (first a-ListOfVolunteerOrg)) (count-hs-eligible (rest a-ListOfVolunteerOrg)))]))
+
+;;6).
+
+;;list-license-training: a-ListOfVolunteerOrg Natural -> a-ListOfVolunteerOrg
+;;consumes a-ListOfVolunteerOrg and a Natural and produces a a-ListOfVolunteerOrg that
+;;only has VolunteerOrgs that require a license and have fewer than the given hourly requirements
+
+(check-expect (list-license-training ListOfVolunteerOrg1 5) (cons (make-volunteer-org "nursing home" "Old People Home" 2 #false #true 0 100 (cons "English" (cons "Pig Latin" (cons "Pig Latin 2.0" '())))) '()))
+(check-expect (list-license-training ListOfVolunteerOrg2 1000) (cons
+ (make-volunteer-org "nursing home" "Old People Home" 2 #false #true 0 100 (cons "English" (cons "Pig Latin" (cons "Pig Latin 2.0" '()))))
+ (cons (make-volunteer-org "habitat conservation" "GEICO" 20 #true #true 999 10 (cons "German" (cons "Arabic" (cons "Pig Latin" '())))) '())))
+
+;;helper fnc
+(define (license-and-max-hrs a-lovo max-hours)
+  (if (and (volunteer-org-license (first a-lovo)) (> max-hours (volunteer-org-training (first a-lovo))))
+      true
+      false))
+
+(define (list-license-training a-lovo max-hours)
+  (cond [(empty? a-lovo) empty]
+        [else (if (license-and-max-hrs a-lovo max-hours)
+                  (cons (first a-lovo) (list-license-training (rest a-lovo) max-hours))
+                  (list-license-training (rest a-lovo) max-hours))]))
+
+;;7).
+;;Languages-spoken: a-ListOfVolunteerOrg -> a-ListOfLanguages
+;;consumes a List of Volunteer-org, and produces a list of each language from the orgs, with repeats
+
+(check-expect (languages-spoken ListOfVolunteerOrg1) (cons "Chalcatongo Mixtec" (cons "Spanish" (cons "English" (cons "Pig Latin" (cons "Pig Latin 2.0" '()))))))
+(check-expect (languages-spoken ListOfVolunteerOrg2) (cons "English" (cons "Pig Latin" (cons "Pig Latin 2.0" (cons "Spanish" (cons "German" (cons "Arabic" (cons "Pig Latin" '()))))))))
+
+(define (languages-spoken a-lovo)
+  (cond [(empty? a-lovo) empty]
+        [else (append (volunteer-org-languages (first a-lovo)) (languages-spoken (rest a-lovo)))]))
+
+;;8).
+;;need-spanish-speakers: a-ListOfVolunteerOrgs -> a-ListOfVolunteerOrgs
+;;consumes a list of volunteer-orgs and produces a list of volunteer-orgs 
+
+;;helper-fcn
+(check-expect (need-spanish-speakers ListOfVolunteerOrg1) (cons ORG1 empty))
+(check-expect (need-spanish-speakers ListOfVolunteerOrg2) (cons ORG4 empty))
+
+(define (contains-string a-list word)
+  (cond [(empty? a-list) false]
+        [else (if (string=? word (first a-list))
+             true
+             (contains-string (rest a-list) word))]))
+
+(define SPANISH "Spanish")
+
+(define (need-spanish-speakers a-lovo)
+  (cond [(empty? a-lovo) empty]
+        [else (if (contains-string (volunteer-org-languages (first a-lovo)) SPANISH)
+              (cons (first a-lovo) (need-spanish-speakers (rest a-lovo)))
+              (need-spanish-speakers (rest a-lovo)))]))
+ 
