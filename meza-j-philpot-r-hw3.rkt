@@ -63,11 +63,6 @@
 
 ;;4).
 
-;  (cond [(empty? ListOfVolunteerOrg) ...]
-;        [else
-;         (... (first los)
-;              (fn-for-los (rest los)))]))
-
 ;; fcn-for-ListOfVolunteerOrg: ListOfVolunteerOrg -> ...
 ; (define (fn-for-ListOfVolunteerOrg ListOfVolunteerOrg)
 ;  (cond [(empty? ListOfVolunteerOrg) ...]
@@ -84,6 +79,11 @@
 (define (hs-eligible a-volunteer-org)
   (if (<= (volunteer-org-age a-volunteer-org) MINIMUM-AGE) 1 0))
 
+(check-expect (hs-eligible ORG1) 0)
+(check-expect (hs-eligible ORG2) 0)
+(check-expect (hs-eligible ORG3) 1)
+(check-expect (hs-eligible ORG4) 0)
+(check-expect (hs-eligible ORG5) 0)
 ;;count-hs-eligible: a-ListOfVolunteerOrg -> Natural
 ;;consumes a list of volunteer organizations and produces the count of orgs that have a minimum age requirement lower than 13
 (define (count-hs-eligible a-ListOfVolunteerOrg)
@@ -91,6 +91,11 @@
     [(empty? a-ListOfVolunteerOrg) 0]
     [else
      (+ (hs-eligible (first a-ListOfVolunteerOrg)) (count-hs-eligible (rest a-ListOfVolunteerOrg)))]))
+
+(check-expect (count-hs-eligible ListOfVolunteerOrg1) 1)
+(check-expect (count-hs-eligible ListOfVolunteerOrg2) 1)
+(check-expect (count-hs-eligible ListOfVolunteerOrg3) 0)
+(check-expect (count-hs-eligible (append ListOfVolunteerOrg1 ListOfVolunteerOrg1 ListOfVolunteerOrg2)) 3)
 
 ;;6).
 
@@ -104,11 +109,16 @@
  (cons (make-volunteer-org "habitat conservation" "GEICO" 20 #true #true 999 10 (cons "German" (cons "Arabic" (cons "Pig Latin" '())))) '())))
 
 ;;helper fnc
+;;license-and-max-hrs: a-lovo max-hours -> boolean
+;;consumes a list of volunteer orgs and max hours and produces true if volunteer has license and max hours is greater than volunteer orgs training hours and false otherwise
 (define (license-and-max-hrs a-lovo max-hours)
   (if (and (volunteer-org-license (first a-lovo)) (> max-hours (volunteer-org-training (first a-lovo))))
       true
       false))
-
+(check-expect (license-and-max-hrs ListOfVolunteerOrg1 100) false)
+(check-expect (license-and-max-hrs ListOfVolunteerOrg2 50) true)
+;; list-license-training: a-lovo max-hours -> ListOfVolunteerOrgs
+;;consumes a list of volunteer orgs and max hours and produces a list of volunteer orgs that require volunteers to be licensed and require fewer than the given number of training hours.
 (define (list-license-training a-lovo max-hours)
   (cond [(empty? a-lovo) empty]
         [else (if (license-and-max-hrs a-lovo max-hours)
@@ -134,12 +144,17 @@
 (check-expect (need-spanish-speakers ListOfVolunteerOrg1) (cons ORG1 empty))
 (check-expect (need-spanish-speakers ListOfVolunteerOrg2) (cons ORG4 empty))
 
+;;contains-string: a-list word -> boolean
+;;consumes a list of volunteer org languages and a word and produces true if list contains the word and false otherwise
 (define (contains-string a-list word)
   (cond [(empty? a-list) false]
         [else (if (string=? word (first a-list))
              true
              (contains-string (rest a-list) word))]))
 
+(check-expect (contains-string (volunteer-org-languages (first ListOfVolunteerOrg1)) "Spanish") true)
+(check-expect (contains-string (volunteer-org-languages (first ListOfVolunteerOrg2)) "English") true)
+(check-expect (contains-string (volunteer-org-languages (first ListOfVolunteerOrg2)) "German") false)
 (define SPANISH "Spanish")
 
 (define (need-spanish-speakers a-lovo)
