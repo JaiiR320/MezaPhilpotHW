@@ -99,8 +99,8 @@
 
 ;;6).
 
-;;list-license-training: a-ListOfVolunteerOrg Natural -> a-ListOfVolunteerOrg
-;;consumes a-ListOfVolunteerOrg and a Natural and produces a a-ListOfVolunteerOrg that
+;;list-license-training: ListOfVolunteerOrg Natural -> ListOfVolunteerOrg
+;;consumes a ListOfVolunteerOrg and a Natural and produces a a ListOfVolunteerOrg that
 ;;only has VolunteerOrgs that require a license and have fewer than the given hourly requirements
 
 (check-expect (list-license-training ListOfVolunteerOrg1 5) (cons (make-volunteer-org "nursing home" "Old People Home" 2 #false #true 0 100 (cons "English" (cons "Pig Latin" (cons "Pig Latin 2.0" '())))) '()))
