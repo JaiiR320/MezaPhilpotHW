@@ -62,7 +62,7 @@
 0 10 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 0 9
 #"Standard\0"
 0 75 12 #"Courier New\0"
-0 13 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 2 1
+0 12 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 2 1
 #"\0"
 0 -1 1 #"\0"
 1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 -1 -1 2 24
@@ -213,18 +213,6 @@
 -1 0 42 #"mrlib/syntax-browser:focused-syntax-color\0"
 0 -1 1 #"\0"
 1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 1 0 0 0 0 0 0 34 139 34 255 255 255 -1
--1 4 1 #"\0"
-0 71 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1.0 1.0 1.0 1.0 1.0 1.0 0 0 0 0 0 0
--1 -1 4 1 #"\0"
-0 -1 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 1 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 0 255 0 0 0 -1
--1 4 1 #"\0"
-0 71 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 1 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 0 255 0 0 0 -1
--1 4 1 #"\0"
-0 71 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 100 0 0 0 0 -1
 -1 0 1 #"\0"
 0 75 12 #"Courier New\0"
 0.0 13 90 -1 90 -1 3 -1 0 1 0 1 0 0 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
@@ -246,7 +234,19 @@
 255 255 255 -1 -1 0 1 #"\0"
 0 -1 1 #"\0"
 1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 1 0.0 0.0 0.0 0.0 0.0 0.0 34 139 34
-255 255 255 -1 -1 0 1 #"\0"
+255 255 255 -1 -1 4 1 #"\0"
+0 71 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1.0 1.0 1.0 1.0 1.0 1.0 0 0 0 0 0 0
+-1 -1 4 1 #"\0"
+0 -1 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 1 0 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 0 0 255 0 0
+0 -1 -1 4 1 #"\0"
+0 71 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 1 0 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 0 0 255 0 0
+0 -1 -1 4 1 #"\0"
+0 71 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 0 100 0 0 0
+0 -1 -1 0 1 #"\0"
 0 75 12 #"Courier New\0"
 0.0 12 90 -1 90 -1 3 -1 0 1 0 1 0 0 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
 255 255 1 -1 4 1 #"\0"
@@ -282,53 +282,22 @@
 255 255 -1 -1 19 1 #"\0"
 0 -1 1 #"\0"
 1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 1 0 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
-255 255 -1 -1           0 1345 0 17 3 85
+255 255 -1 -1           0 1308 0 4 3 85
 (4
  #";; The first three lines of this file were inserted by DrRacket. The"
  #"y record metadata"
-) 0 0 24 29 1 #"\n"
-0 0 17 3 85
+) 0 0 4 29 1 #"\n"
+0 0 4 3 85
 (5
  #";; about the language level of this file in a form that our tools ca"
  #"n easily process."
-) 0 0 24 29 1 #"\n"
-0 0 26 3 7 #"#reader"
-0 0 24 3 1 #"("
-0 0 14 3 3 #"lib"
-0 0 24 3 1 #" "
-0 0 19 3 25 #"\"htdp-advanced-reader.ss\""
-0 0 24 3 1 #" "
-0 0 19 3 6 #"\"lang\""
-0 0 24 3 3 #")(("
-0 0 14 3 7 #"modname"
-0 0 24 3 1 #" "
-0 0 14 3 13 #"philpot-r-hw6"
-0 0 24 3 3 #") ("
-0 0 14 3 19 #"read-case-sensitive"
-0 0 24 3 1 #" "
-0 0 21 3 2 #"#t"
-0 0 24 3 3 #") ("
-0 0 14 3 10 #"teachpacks"
-0 0 24 3 6 #" ()) ("
-0 0 14 3 13 #"htdp-settings"
-0 0 24 3 3 #" #("
-0 0 21 3 2 #"#t"
-0 0 24 3 1 #" "
-0 0 14 3 11 #"constructor"
-0 0 24 3 1 #" "
-0 0 14 3 17 #"repeating-decimal"
-0 0 24 3 1 #" "
-0 0 21 3 2 #"#t"
-0 0 24 3 1 #" "
-0 0 21 3 2 #"#t"
-0 0 24 3 1 #" "
-0 0 14 3 4 #"none"
-0 0 24 3 1 #" "
-0 0 21 3 2 #"#f"
-0 0 24 3 4 #" () "
-0 0 21 3 2 #"#f"
-0 0 24 3 3 #")))"
-0 0 24 29 1 #"\n"
+) 0 0 4 29 1 #"\n"
+0 0 4 3 183
+(6
+ #"#reader(lib \"htdp-advanced-reader.ss\" \"lang\")((modname philpot-r"
+ #"-hw6) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t c"
+ #"onstructor repeating-decimal #t #t none #f () #f)))"
+) 0 0 4 29 1 #"\n"
 0 0 17 3 5 #";;1)."
 0 0 24 29 1 #"\n"
 0 0 24 3 1 #"("
@@ -348,7 +317,7 @@
 0 0 24 3 2 #"))"
 0 0 24 29 1 #"\n"
 0 0 17 3 72
-(6
+(7
  #";; course is a (make-course String Natural String Natural ListOfStud"
  #"ent)"
 ) 0 0 24 29 1 #"\n"
@@ -775,19 +744,19 @@
 0 0 17 3 53 #";;add-course: String Natural String Natural -> (void)"
 0 0 24 29 1 #"\n"
 0 0 17 3 90
-(7
+(8
  #";;consumes a department, course number teacher and enrollment capaci"
  #"ty and extends Courses"
 ) 0 0 24 29 1 #"\n"
 0 0 17 3 73
-(8
+(9
  #";;EFFECT: changes the number of courses in Courses by adding a new c"
  #"ourse"
 ) 0 0 24 29 1 #"\n"
 0 0 17 3 12 #";;test cases"
 0 0 24 29 1 #"\n"
 0 0 17 3 77
-(9
+(10
  #";(check-expect (add-course \"CS\" 1102 \"Prof. Prof\" 10) ) ********"
  #"*************"
 ) 0 0 24 29 1 #"\n"
@@ -852,7 +821,7 @@
 #";;course-helper-fn: ListOfCourses String Natural -> Boolean"
 0 0 24 29 1 #"\n"
 0 0 17 3 76
-(10
+(11
  #";;consumes a list of courses, a department, and a course number and "
  #"produces"
 ) 0 0 24 29 1 #"\n"
@@ -1164,12 +1133,12 @@
 0 0 17 3 49 #";;add-to-course: Natural String Natural -> (void)"
 0 0 24 29 1 #"\n"
 0 0 17 3 110
-(11
+(12
  #";;consumes a Student ID, a department and a course number and produc"
  #"es (void) and mutates Students and Courses"
 ) 0 0 24 29 1 #"\n"
 0 0 17 3 108
-(12
+(13
  #";;EFFECT: adds to the ListOfStudent in a course in Courses and adds "
  #"to ListOfCourse in a student in Students"
 ) 0 0 24 29 1 #"\n"
@@ -1310,7 +1279,7 @@
 0 0 17 3 51 #";;return-student: Natural ListOfStudents -> Student"
 0 0 24 29 1 #"\n"
 0 0 17 3 75
-(13
+(14
  #";;consumes a Student ID and returns the corresponding student from t"
  #"he list"
 ) 0 0 24 29 1 #"\n"
@@ -1421,7 +1390,7 @@
 0 0 17 3 49 #";;return-student: Natural ListOfCourses -> Course"
 0 0 24 29 1 #"\n"
 0 0 17 3 92
-(14
+(15
  #";;consumes a Course number and department and returns the correspond"
  #"ing course from the list"
 ) 0 0 24 29 1 #"\n"
@@ -1560,7 +1529,7 @@
 0 0 17 3 30 #";;largest-enrollment -> (void)"
 0 0 24 29 1 #"\n"
 0 0 17 3 92
-(15
+(16
  #";;consumes nothing and produces the first course with the highest am"
  #"ount of current students"
 ) 0 0 24 29 1 #"\n"
@@ -1642,12 +1611,10 @@
 0 0 24 3 1 #" "
 0 0 14 3 5 #"a-loc"
 0 0 24 3 3 #") ("
-0 0 14 3 20 #"course-ListOfStudent"
-0 0 24 3 2 #" ("
 0 0 14 3 5 #"first"
 0 0 24 3 1 #" "
 0 0 14 3 5 #"a-loc"
-0 0 24 3 3 #")))"
+0 0 24 3 2 #"))"
 0 0 24 29 1 #"\n"
 0 0 24 3 20 #"                   ("
 0 0 14 3 28 #"largest-enrollment-helper-fn"
