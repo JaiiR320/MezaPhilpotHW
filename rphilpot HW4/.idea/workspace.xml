@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="feabc718-86b6-4e81-8530-7025b5a05b10" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kTnid23P193kdOgwm4kM4i3W61" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="JUnit.Examples.addEltTester">
+    <configuration name="Examples" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rphilpot HW4" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples.addEltTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rphilpot HW4" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="METHOD_NAME" value="addEltTester" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples.contains" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rphilpot HW4" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="METHOD_NAME" value="contains" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples.hasElt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rphilpot HW4" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="METHOD_NAME" value="hasElt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples.isHeap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rphilpot HW4" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="METHOD_NAME" value="isHeap" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Examples.addEltTester" />
+        <item itemvalue="JUnit.Examples.contains" />
+        <item itemvalue="JUnit.Examples.hasElt" />
+        <item itemvalue="JUnit.Examples.isHeap" />
+        <item itemvalue="JUnit.Examples" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="WindowStateProjectService">
+    <state x="660" y="167" key="#com.intellij.ide.util.MemberChooser" timestamp="1605751066130">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="660" y="167" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1605751066130" />
+    <state width="1686" height="242" key="GridCell.Tab.0.bottom" timestamp="1605753686502">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605753686502" />
+    <state width="1686" height="242" key="GridCell.Tab.0.center" timestamp="1605753686502">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1605753686502" />
+    <state width="1686" height="242" key="GridCell.Tab.0.left" timestamp="1605753686502">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1605753686502" />
+    <state width="1686" height="242" key="GridCell.Tab.0.right" timestamp="1605753686502">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1605753686502" />
+    <state width="1686" height="300" key="GridCell.Tab.1.bottom" timestamp="1605751977283">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="300" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605751977283" />
+    <state width="1686" height="300" key="GridCell.Tab.1.center" timestamp="1605751977282">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="300" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1605751977282" />
+    <state width="1686" height="300" key="GridCell.Tab.1.left" timestamp="1605751977282">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="300" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1605751977282" />
+    <state width="1686" height="300" key="GridCell.Tab.1.right" timestamp="1605751977283">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="300" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1605751977283" />
+    <state x="582" y="353" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1605734969945">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="582" y="353" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1707.920@0.0.1707.920" timestamp="1605734969945" />
+    <state x="631" y="219" key="refactoring.ChangeSignatureDialog" timestamp="1605743686484">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="631" y="219" key="refactoring.ChangeSignatureDialog/0.0.1707.920@0.0.1707.920" timestamp="1605743686484" />
+    <state x="516" y="196" width="672" height="678" key="search.everywhere.popup" timestamp="1605736074698">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="516" y="196" width="672" height="678" key="search.everywhere.popup/0.0.1707.920@0.0.1707.920" timestamp="1605736074698" />
+  </component>
+</project>
