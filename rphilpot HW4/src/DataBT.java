@@ -31,16 +31,32 @@ class DataBT implements IBinTree {
         return 1 + Math.max(this.left.height(), this.right.height());
     }
 
+    public int countElt(int e){
+        if(data == e){
+            return 1 + left.countElt(e) + right.countElt(e);
+        } else {
+            return left.countElt(e) + right.countElt(e);
+        }
+    }
+
     //checks to see if heap is valid
-    public boolean isHeap(int e) {
-        return e <= data && this.left.isHeap(data) && this.right.isHeap(data);
+    public boolean isSmaller(int e) {
+        return e <= data && this.left.isSmaller(data) && this.right.isSmaller(data);
+    }
+    public boolean isHeap(){
+        return this.left.isSmaller(data) && this.right.isSmaller(data);
+    }
+
+    public boolean checkOccurence(IHeap hOrig, int elt, IBinTree hAdded){
+        int orignial = hOrig.countElt(data);
+        int after = hAdded.countElt(data);
+        if(hOrig.addElt(elt)){
+        
+        }
+
     }
 
     public boolean contains(IBinTree hAdded) {
         return hAdded.hasElt(data) && this.left.contains(hAdded) && this.right.contains(hAdded);
-    }
-
-    public boolean addEltTester(IHeap hOrig, int elt, IBinTree hAdded) {
-        return hOrig.isHeap(data) && hOrig.contains(hAdded);
     }
 }

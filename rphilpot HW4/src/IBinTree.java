@@ -9,11 +9,7 @@ interface IBinTree {
     int height();
 
     // determines if tree is a valid heap
-    boolean isHeap(int data);
+    boolean isSmaller(int data);
 
-    //determines if added has same numbers as original
-    boolean contains(IBinTree hAdded);
-
-    //tests adding element
-    boolean addEltTester(IHeap hOrig, int elt, IBinTree hAdded);
+    int countElt(int e);
 }

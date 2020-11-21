@@ -16,17 +16,11 @@ class MtBT implements IBinTree {
         return 0;
     }
 
-    public boolean isHeap(int e){
+    public boolean isSmaller(int e){
         return true;
     }
-
-
-    public boolean contains(IBinTree hAdded) {
-        return true;
-    }
-
-
-    public boolean addEltTester(IHeap hOrig, int elt, IBinTree hAdded) {
-        return true;
+    
+    public int countElt(int e){
+        return 0;
     }
 }
