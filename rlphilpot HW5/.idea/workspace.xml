@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5226207d-2d67-48b2-81a8-68f3b10cece7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kwfkFSG1R1KYI1DaExaVNJ2gAO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="JUnit.Examples">
+    <configuration name="Examples" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rlphilpot HW5" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples.avgTempTwoReports" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rlphilpot HW5" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="METHOD_NAME" value="avgTempTwoReports" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples.edgeCaseNoGivenYearTemp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rlphilpot HW5" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="METHOD_NAME" value="edgeCaseNoGivenYearTemp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples.testTempAvg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rlphilpot HW5" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="METHOD_NAME" value="testTempAvg" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples.testTotalRainfall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rlphilpot HW5" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="METHOD_NAME" value="testTotalRainfall" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Examples" />
+        <item itemvalue="JUnit.Examples.testTempAvg" />
+        <item itemvalue="JUnit.Examples.testTotalRainfall" />
+        <item itemvalue="JUnit.Examples.avgTempTwoReports" />
+        <item itemvalue="JUnit.Examples.edgeCaseNoGivenYearTemp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="WindowStateProjectService">
+    <state x="585" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606621783429">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="585" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920@0.0.1707.920" timestamp="1606621783429" />
+    <state width="1686" height="292" key="GridCell.Tab.0.bottom" timestamp="1606776218822">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="292" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1606776218822" />
+    <state width="1686" height="292" key="GridCell.Tab.0.center" timestamp="1606776218822">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="292" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1606776218822" />
+    <state width="1686" height="292" key="GridCell.Tab.0.left" timestamp="1606776218822">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="292" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1606776218822" />
+    <state width="1686" height="292" key="GridCell.Tab.0.right" timestamp="1606776218822">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="292" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1606776218822" />
+    <state width="1686" height="300" key="GridCell.Tab.1.bottom" timestamp="1606776218820">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="300" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1606776218820" />
+    <state width="1686" height="300" key="GridCell.Tab.1.center" timestamp="1606776218820">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="300" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1606776218820" />
+    <state width="1686" height="300" key="GridCell.Tab.1.left" timestamp="1606776218820">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="300" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1606776218820" />
+    <state width="1686" height="300" key="GridCell.Tab.1.right" timestamp="1606776218820">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="300" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1606776218820" />
+    <state x="582" y="353" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1606759073651">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="582" y="353" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1707.920@0.0.1707.920" timestamp="1606759073651" />
+    <state x="516" y="196" width="672" height="160" key="search.everywhere.popup" timestamp="1606618510116">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="516" y="196" width="672" height="160" key="search.everywhere.popup/0.0.1707.920@0.0.1707.920" timestamp="1606618510116" />
+  </component>
+</project>
