@@ -16,7 +16,38 @@ public class Examples {
         wm1.addDailyReport(new GregorianCalendar(2020, 9,12), d1);
         wm1.addDailyReport(new GregorianCalendar(2020, 10,2), d2);
         wm1.addDailyReport(new GregorianCalendar(2020, 9,20), d3);
+
+        // 3 temp, 13 rain
+        LinkedList<Reading> a = new LinkedList<>();
+        LinkedList<Reading> b = new LinkedList<>();
+        LinkedList<Reading> c = new LinkedList<>(); // c is empty
+        a.add(s1);
+        a.add(s2);
+        a.add(s3);
+
+        b.add(s4);
+        b.add(s5);
+        b.add(s6);
+
+        w = new WeatherMoniter(list);
+        w.addDailyReport(new GregorianCalendar(2020, 9, 1), a);
+        w.addDailyReport(new GregorianCalendar(2020, 10, 1), b);
+        w.addDailyReport(new GregorianCalendar(2020, 11, 1), c);
+        System.out.println(w.averageTempForMonth(10, 2020) + " " + w.totalRainfallForMonth(10, 2020));
     }
+
+    LinkedList<DailyWeatherReport> t = new LinkedList<>();
+    IDailyWeatherReport list = new DWRLinkedList(t);
+    WeatherMoniter w = new WeatherMoniter(list);
+
+    Reading s1 = new Reading(new Time(1,1), 5, 2);
+    Reading s2 = new Reading(new Time(1,1), 3, 3);
+    Reading s3 = new Reading(new Time(1,1), 2, 6);
+    // 10/3 temp, 11 rain
+
+    Reading s4 = new Reading(new Time(1,1), 1, 9);
+    Reading s5 = new Reading(new Time(1,1), 5, 0);
+    Reading s6 = new Reading(new Time(1,1), 3, 4);
 
     Reading r1 = new Reading(new Time(2,1), 70, 0.4);  //Temp: 74
     Reading r2 = new Reading(new Time(3,20), 78, 2.5); //Rain: 2.9
@@ -140,5 +171,31 @@ public class Examples {
         assertEquals(280.00, wm1.totalRainfallForMonth(1,2001),0.01);
         assertEquals(0.00, wm1.totalRainfallForMonth(5,2001),0.01); //edge case
         assertEquals(25.00, wm1.totalRainfallForMonth(0,2001),0.01);
+    }
+
+    @Test
+    public void emptyReport() {
+        LinkedList<DailyWeatherReport> reportE = new LinkedList<>();
+        IDailyWeatherReport reportEm = new DWRLinkedList(reportE);
+        WeatherMoniter wmE = new WeatherMoniter(reportEm);
+
+        assertEquals(0, wmE.averageTempForMonth(9, 2020), .01);
+        assertEquals(0, wmE.totalRainfallForMonth(10, 1988), .01);
+    }
+
+    @Test
+    public void averageTempTest(){
+        assertEquals(3.33, w.averageTempForMonth(9, 2020), .01);
+        assertEquals(3, w.averageTempForMonth(10, 2020), .01);
+        assertEquals(0, w.averageTempForMonth(11, 2020), .01); // empty
+        assertEquals(0, w.averageTempForMonth(1145, 2015120), .01); // no date
+    }
+
+    @Test
+    public void totalRainfallTest(){
+        assertEquals(11, w.totalRainfallForMonth(9, 2020), .01);
+        assertEquals(13, w.totalRainfallForMonth(10, 2020), .01);
+        assertEquals(0, w.totalRainfallForMonth(11, 2020), .01); // empty
+        assertEquals(0, w.totalRainfallForMonth(1145, 2015120), .01); // no date
     }
 }

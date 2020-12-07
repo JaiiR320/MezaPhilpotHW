@@ -27,7 +27,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.Examples">
+  <component name="RunManager" selected="JUnit.Examples.totalRainfallTest">
     <configuration name="Examples" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rlphilpot HW5" />
       <option name="PACKAGE_NAME" value="" />
@@ -37,21 +37,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Examples.avgTempTwoReports" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Examples.averageTempTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rlphilpot HW5" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Examples" />
-      <option name="METHOD_NAME" value="avgTempTwoReports" />
+      <option name="METHOD_NAME" value="averageTempTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Examples.edgeCaseNoGivenYearTemp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Examples.emptyReport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rlphilpot HW5" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Examples" />
-      <option name="METHOD_NAME" value="edgeCaseNoGivenYearTemp" />
+      <option name="METHOD_NAME" value="emptyReport" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -67,11 +67,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Examples.testTotalRainfall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Examples.totalRainfallTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rlphilpot HW5" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Examples" />
-      <option name="METHOD_NAME" value="testTotalRainfall" />
+      <option name="METHOD_NAME" value="totalRainfallTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -79,11 +79,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Examples.totalRainfallTest" />
+        <item itemvalue="JUnit.Examples.averageTempTest" />
+        <item itemvalue="JUnit.Examples.emptyReport" />
         <item itemvalue="JUnit.Examples" />
         <item itemvalue="JUnit.Examples.testTempAvg" />
-        <item itemvalue="JUnit.Examples.testTotalRainfall" />
-        <item itemvalue="JUnit.Examples.avgTempTwoReports" />
-        <item itemvalue="JUnit.Examples.edgeCaseNoGivenYearTemp" />
       </list>
     </recent_temporary>
   </component>
@@ -93,22 +93,22 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="585" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920@0.0.1707.920" timestamp="1606621783429" />
-    <state width="1686" height="292" key="GridCell.Tab.0.bottom" timestamp="1606776218822">
+    <state width="1686" height="114" key="GridCell.Tab.0.bottom" timestamp="1606874116565">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1686" height="292" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1606776218822" />
-    <state width="1686" height="292" key="GridCell.Tab.0.center" timestamp="1606776218822">
+    <state width="1686" height="114" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1606874116565" />
+    <state width="1686" height="114" key="GridCell.Tab.0.center" timestamp="1606874116565">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1686" height="292" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1606776218822" />
-    <state width="1686" height="292" key="GridCell.Tab.0.left" timestamp="1606776218822">
+    <state width="1686" height="114" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1606874116565" />
+    <state width="1686" height="114" key="GridCell.Tab.0.left" timestamp="1606874116565">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1686" height="292" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1606776218822" />
-    <state width="1686" height="292" key="GridCell.Tab.0.right" timestamp="1606776218822">
+    <state width="1686" height="114" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1606874116565" />
+    <state width="1686" height="114" key="GridCell.Tab.0.right" timestamp="1606874116565">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1686" height="292" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1606776218822" />
+    <state width="1686" height="114" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1606874116565" />
     <state width="1686" height="300" key="GridCell.Tab.1.bottom" timestamp="1606776218820">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

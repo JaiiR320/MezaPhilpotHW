@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ce6d742-0309-43ab-8863-f13b5e05319d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1l1Z1beihO2wcAJtWf2MjrlP3gv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Examples" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jairh5" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Examples" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="WindowStateProjectService">
+    <state width="1686" height="242" key="GridCell.Tab.0.bottom" timestamp="1606766391716">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1606766391716" />
+    <state width="1686" height="242" key="GridCell.Tab.0.center" timestamp="1606766391716">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1606766391716" />
+    <state width="1686" height="242" key="GridCell.Tab.0.left" timestamp="1606766391716">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1606766391716" />
+    <state width="1686" height="242" key="GridCell.Tab.0.right" timestamp="1606766391716">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1686" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1606766391716" />
+    <state x="582" y="353" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1606766367964">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="582" y="353" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1707.920@0.0.1707.920" timestamp="1606766367964" />
+    <state x="516" y="81" key="new project wizard" timestamp="1606914067658">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="516" y="81" key="new project wizard/0.0.1707.920@0.0.1707.920" timestamp="1606914067658" />
+  </component>
+</project>
