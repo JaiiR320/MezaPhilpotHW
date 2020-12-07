@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="247e0cb7-9e5d-498d-a781-5e7b5a233a41" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lIm4wlIXXpKxmFnextNYo6Ek6O" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="JUnit.Examples">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="rlphilpot HW6" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rlphilpot HW6" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples.testFirstWinnerTie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rlphilpot HW6" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="METHOD_NAME" value="testFirstWinnerTie" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples.testMostFirstWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rlphilpot HW6" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="METHOD_NAME" value="testMostFirstWinner" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Examples" />
+        <item itemvalue="JUnit.Examples.testMostFirstWinner" />
+        <item itemvalue="JUnit.Examples.testFirstWinnerTie" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="WindowStateProjectService">
+    <state x="585" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607293786111">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="585" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920@0.0.1707.920" timestamp="1607293786111" />
+    <state width="1673" height="242" key="GridCell.Tab.0.bottom" timestamp="1607364786202">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1673" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1607364786202" />
+    <state width="1673" height="242" key="GridCell.Tab.0.center" timestamp="1607364786202">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1673" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1607364786202" />
+    <state width="1673" height="242" key="GridCell.Tab.0.left" timestamp="1607364786202">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1673" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1607364786202" />
+    <state width="1673" height="242" key="GridCell.Tab.0.right" timestamp="1607364786202">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1673" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1607364786202" />
+    <state width="1673" height="297" key="GridCell.Tab.1.bottom" timestamp="1607364474234">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1673" height="297" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1607364474234" />
+    <state width="1673" height="297" key="GridCell.Tab.1.center" timestamp="1607364474234">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1673" height="297" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1607364474234" />
+    <state width="1673" height="297" key="GridCell.Tab.1.left" timestamp="1607364474234">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1673" height="297" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1607364474234" />
+    <state width="1673" height="297" key="GridCell.Tab.1.right" timestamp="1607364474234">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1673" height="297" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1607364474234" />
+    <state x="582" y="353" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1607362982490">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="582" y="353" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1707.920@0.0.1707.920" timestamp="1607362982490" />
+  </component>
+</project>
