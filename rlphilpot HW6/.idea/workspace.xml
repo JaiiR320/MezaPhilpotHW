@@ -27,13 +27,6 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
   </component>
   <component name="RunManager" selected="JUnit.Examples">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="rlphilpot HW6" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Examples" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rlphilpot HW6" />
       <option name="PACKAGE_NAME" value="" />
@@ -43,21 +36,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Examples.testFirstWinnerTie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Examples.testMostPointWinnerSetup1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rlphilpot HW6" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Examples" />
-      <option name="METHOD_NAME" value="testFirstWinnerTie" />
+      <option name="METHOD_NAME" value="testMostPointWinnerSetup1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Examples.testMostFirstWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Examples.testMostPointWinnerSetup3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rlphilpot HW6" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Examples" />
-      <option name="METHOD_NAME" value="testMostFirstWinner" />
+      <option name="METHOD_NAME" value="testMostPointWinnerSetup3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples.testMostPointWinnerTieSetup1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rlphilpot HW6" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="METHOD_NAME" value="testMostPointWinnerTieSetup1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examples.testMostPointWinnerTieSetup3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rlphilpot HW6" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Examples" />
+      <option name="METHOD_NAME" value="testMostPointWinnerTieSetup3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -66,9 +79,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Examples" />
-        <item itemvalue="JUnit.Examples.testMostFirstWinner" />
-        <item itemvalue="JUnit.Examples.testFirstWinnerTie" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.Examples.testMostPointWinnerSetup3" />
+        <item itemvalue="JUnit.Examples.testMostPointWinnerTieSetup1" />
+        <item itemvalue="JUnit.Examples.testMostPointWinnerSetup1" />
+        <item itemvalue="JUnit.Examples.testMostPointWinnerTieSetup3" />
       </list>
     </recent_temporary>
   </component>
@@ -78,22 +92,22 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="585" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920@0.0.1707.920" timestamp="1607293786111" />
-    <state width="1673" height="242" key="GridCell.Tab.0.bottom" timestamp="1607364786202">
+    <state width="1686" height="242" key="GridCell.Tab.0.bottom" timestamp="1607469859077">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1673" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1607364786202" />
-    <state width="1673" height="242" key="GridCell.Tab.0.center" timestamp="1607364786202">
+    <state width="1686" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1607469859077" />
+    <state width="1686" height="242" key="GridCell.Tab.0.center" timestamp="1607469859077">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1673" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1607364786202" />
-    <state width="1673" height="242" key="GridCell.Tab.0.left" timestamp="1607364786202">
+    <state width="1686" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1607469859077" />
+    <state width="1686" height="242" key="GridCell.Tab.0.left" timestamp="1607469859077">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1673" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1607364786202" />
-    <state width="1673" height="242" key="GridCell.Tab.0.right" timestamp="1607364786202">
+    <state width="1686" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1607469859077" />
+    <state width="1686" height="242" key="GridCell.Tab.0.right" timestamp="1607469859077">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1673" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1607364786202" />
+    <state width="1686" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1607469859077" />
     <state width="1673" height="297" key="GridCell.Tab.1.bottom" timestamp="1607364474234">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

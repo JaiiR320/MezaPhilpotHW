@@ -2,13 +2,16 @@ import java.util.Scanner;
 
 public class VotingMachine {
     private Scanner keyboard = new Scanner(System.in);
-    ElectionData electionData;
+    private ElectionData electionData;
 
     public VotingMachine(ElectionData electionData) {
         this.electionData = electionData;
     }
 
-    public void screen() throws CandidateExistsException, DuplicateVotesException {
+    /**
+     * the user interface to vote
+     */
+    public void screen() {
         electionData.printBallot();
 
         System.out.println("Who do you want to vote for?");
@@ -35,7 +38,11 @@ public class VotingMachine {
         }
     }
 
-    private void addWriteIn(String candidate) throws CandidateExistsException {
+    /**
+     * adds new candidate to the ballot
+     * @param candidate candidate voter wishes to add to the ballot
+     */
+    private void addWriteIn(String candidate) {
         try {
             electionData.addCandidate(candidate);
         }

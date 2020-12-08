@@ -1,6 +1,5 @@
 import java.util.Hashtable;
 import java.util.LinkedList;
-import java.util.Scanner;
 
 class ElectionData {
     private LinkedList<String> ballot = new LinkedList<String>();
@@ -9,11 +8,13 @@ class ElectionData {
     private Hashtable<String, Integer> secondChoice = new Hashtable<>();
     private Hashtable<String, Integer> thirdChoice = new Hashtable<>();
 
-    Scanner keyboard = new Scanner(System.in);
-
     ElectionData() {
     }
 
+    /**
+     * Finds the winner of election based on the peoples first choice
+     * @return the name of the candidate that won or "Runoff required" if it is a tie.
+     */
     public String findWinnerMostFirstVotes() {
         double voteCount = 0;
         for(String key: ballot){
@@ -27,6 +28,10 @@ class ElectionData {
         return "Runoff required";
     }
 
+    /**
+     * Finds the winner of election based on the point system (3 points for first choice, 2 points for second choice, 1 point for third choice)
+     * @return the name of the candidate that won
+     */
     public String findWinnerMostPoints() {
         int max = 0, sum = 0;
         String winner = ballot.get(0);
@@ -44,6 +49,14 @@ class ElectionData {
         return winner;
     }
 
+    /**
+     * Stores a single voters choice in the data structure
+     * @param candidate1 name of the candidate for voters first choice
+     * @param candidate2 name of the candidate for voters second choice
+     * @param candidate3 name of the candidate for voters second choice
+     * @throws UnknownCandidateException thrown if ballot does not contain a candidate the user voted for
+     * @throws DuplicateVotesException thrown if voter voted for a candidate more than once
+     */
     public void processVote(String candidate1, String candidate2, String candidate3) throws UnknownCandidateException, DuplicateVotesException{
 
         if (!(ballot.contains(candidate1))) {
@@ -71,6 +84,11 @@ class ElectionData {
             System.out.println("You voted for " + candidate1 + candidate2 + candidate3);
     }
 
+    /**
+     * adds a candidates name to the ballot
+     * @param candidate name of candidate to be added to ballot
+     * @throws CandidateExistsException thrown if the candidates name already exists in the ballot
+     */
     public void addCandidate(String candidate) throws CandidateExistsException {
             if (ballot.contains(candidate)) {
                 throw new CandidateExistsException(candidate);
@@ -83,6 +101,9 @@ class ElectionData {
             }
     }
 
+    /**
+     * prints the names of candidates on the ballot
+     */
     public void printBallot() {
         System.out.println("The candidates are ");
         for (String s : ballot) {
@@ -90,6 +111,12 @@ class ElectionData {
         }
     }
 
+    /**
+     * adds a vote to the candidate the voter voted for
+     * @param key name of the candidate the voter voted for
+     * @param votes the hashtable based on what choice the candidate was
+     * @return the number of votes the candidate now has
+     */
     public int addCount(String key, Hashtable<String, Integer> votes) {
         return votes.get(key)+1;
     }

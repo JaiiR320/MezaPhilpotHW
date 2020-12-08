@@ -1,5 +1,5 @@
-// Baohui Zhang      bzhang7
-// Haopeng Wang      hwang15
+// Kanyeert Philpot      rlphilpot
+// Jair Meza           jdmeza
 
 import org.junit.Test;
 import java.util.LinkedList;
@@ -13,25 +13,26 @@ public class Examples {
 
         ElectionData ED1 = new ElectionData();
 
-        // put candidates on the ballot
+        // add candidates to the ballot
         try {
-            ED1.addCandidate("Cather");
-            ED1.addCandidate("John");
-            ED1.addCandidate("Rob");
-            ED1.addCandidate("Gompei");
-            ED1.addCandidate("Husky");
+            ED1.addCandidate("Plankton");
+            ED1.addCandidate("doofenshmirtz");
+            ED1.addCandidate("Lincoln");
+            ED1.addCandidate("Washington");
+            ED1.addCandidate("Kanye");
+
         } catch (Exception e) {}
 
         // cast votes
 
         try {
-            ED1.processVote("Cather", "John", "Rob");
-            ED1.processVote("Cather", "John", "Gompei");
-            ED1.processVote("Cather", "John", "Rob");
-            ED1.processVote("Cather", "John", "Rob");
-            ED1.processVote("John", "Husky", "Rob");
-            ED1.processVote("Gompei", "Husky", "John");
-            //Cather: 12  John: 12  Gompei: 4 Husky: 4  Rob: 4
+            ED1.processVote("Lincoln", "Plankton", "Kanye");
+            ED1.processVote("Washington", "Husky", "Kanye");
+            ED1.processVote("Plankton", "Husky", "Washington");
+            ED1.processVote("Lincoln", "doofenshmirtz", "Kanye");
+            ED1.processVote("Lincoln", "doofenshmirtz", "Plankton");
+            ED1.processVote("Plankton", "Washington", "Kanye");
+            // Lincoln: 9   Plankton: 9 Kanye: 4    doofenshmirtz: 4    Washington: 6
         } catch (Exception e) {}
 
         return(ED1);
@@ -44,9 +45,9 @@ public class Examples {
         // put candidates on the ballot
         try {
 
-            ED.addCandidate("gompei");
+            ED.addCandidate("Plankton");
             ED.addCandidate("husky");
-            ED.addCandidate("ziggy");
+            ED.addCandidate("doofenshmirtz");
 
         } catch (Exception e) {}
 
@@ -54,10 +55,10 @@ public class Examples {
 
         try {
 
-            ED.processVote("gompei", "husky", "ziggy");
-            ED.processVote("gompei", "ziggy", "husky");
-            ED.processVote("husky", "gompei", "ziggy");
-
+            ED.processVote("Plankton", "husky", "doofenshmirtz");
+            ED.processVote("Plankton", "doofenshmirtz", "husky");
+            ED.processVote("Plankton", "husky", "doofenshmirtz");
+            // Plankton: 9  husky: 5    doofenshmirtz: 4
         } catch (Exception e) {}
 
         return(ED);
@@ -71,9 +72,10 @@ public class Examples {
         // put candidates on the ballot
         try {
 
-            ED.addCandidate("gompei");
+            ED.addCandidate("Plankton");
             ED.addCandidate("husky");
-            ED.addCandidate("ziggy");
+            ED.addCandidate("doofenshmirtz");
+            ED.addCandidate("RickyBobby");
 
         } catch (Exception e) {}
 
@@ -81,61 +83,68 @@ public class Examples {
 
         try {
 
-            ED.processVote("gompei", "husky", "ziggy");
-            ED.processVote("ziggy", "gompei", "husky");
-            ED.processVote("husky", "gompei", "ziggy");
-
+            ED.processVote("Plankton", "RickyBobby", "doofenshmirtz");
+            ED.processVote("doofenshmirtz", "Plankton", "husky");
+            ED.processVote("RickyBobby", "Plankton", "RickyBobby");
+            // husky: 1 Plankton: 5 RickyBobby: 2   doofenshmirtz: 4
         } catch (Exception e) {}
 
         return(ED);
     }
+
     @Test
-    public void testMostFirstWinner () {
-        assertEquals ("gompei", Setup2().findWinnerMostFirstVotes());
+    public void testMostFirstWinnerSetup1() {
+        assertEquals("Lincoln", Setup1().findWinnerMostFirstVotes());
+    }
+    @Test
+    public void testMostFirstWinnerSetup2 () {
+        assertEquals ("Plankton", Setup2().findWinnerMostFirstVotes());
     }
 
     @Test
-    public void testFirstWinnerTie() {
+    public void testFirstWinnerTieSetup3() {
         assertTrue(Setup3().findWinnerMostFirstVotes().equals("Runoff required"));
     }
 
     @Test
-    public void testMostPointWinner() {
-        assertEquals ("gompei", Setup2().findWinnerMostPoints());
-    }
-
-    @Test
-    public void testMostPointWinner2() {
-        assertEquals ("gompei", Setup3().findWinnerMostPoints());
-    }
-
-    @Test
-    public void testTieWinners() {
+    public void testMostPointWinnerTieSetup1() {
         LinkedList<String> winners = new LinkedList<>();
-        winners.add("Cather");
-        winners.add("John");
+        winners.add("Lincoln");
+        winners.add("Plankton");
         assertTrue (winners.contains(Setup1().findWinnerMostPoints()));
     }
 
+    @Test
+    public void testMostPointWinnerSetup2() {
+        assertEquals ("Plankton", Setup2().findWinnerMostPoints());
+    }
+
+    @Test
+    public void testMostPointWinnerSetup3() {
+        assertEquals ("Plankton", Setup3().findWinnerMostPoints());
+    }
+
     @Test(expected = CandidateExistsException.class)
-    public void testAddExistedCandidate() throws CandidateExistsException
+    public void testAddExistingCandidate() throws CandidateExistsException
     {
-        ED.addCandidate("Cather");
-        ED.addCandidate("Cather");
+        ElectionData ED = new ElectionData();
+        ED.addCandidate("Lincoln");
+        ED.addCandidate("Lincoln");
     }
 
     @Test(expected = UnknownCandidateException.class)
     public void testUnknownCandidate() throws UnknownCandidateException, DuplicateVotesException, CandidateExistsException {
-        ED.addCandidate("Cather");
+        ElectionData ED = new ElectionData();
+        ED.addCandidate("Lincoln");
         ED.addCandidate("Husky");
-        ED.processVote("Cather", "Husky", "John");
+        ED.processVote("Lincoln", "Husky", "Washington");
     }
 
     @Test(expected = DuplicateVotesException.class)
     public void testDuplicateCandidate() throws UnknownCandidateException, DuplicateVotesException, CandidateExistsException {
-        ED.addCandidate("Cather");
+        ElectionData ED = new ElectionData();
+        ED.addCandidate("Lincoln");
         ED.addCandidate("Husky");
-        ED.processVote("Cather", "Husky", "Cather");
+        ED.processVote("Lincoln", "Husky", "Lincoln");
     }
-
 }
