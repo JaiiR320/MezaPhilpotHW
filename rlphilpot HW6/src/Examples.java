@@ -6,7 +6,6 @@ import java.util.LinkedList;
 import static org.junit.Assert.*;
 
 public class Examples {
-    public Examples(){};
     ElectionData ED = new ElectionData();
 
     ElectionData Setup1 () {

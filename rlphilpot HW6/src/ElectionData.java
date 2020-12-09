@@ -1,12 +1,13 @@
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.LinkedList;
 
 class ElectionData {
     private LinkedList<String> ballot = new LinkedList<String>();
 
-    private Hashtable<String, Integer> firstChoice = new Hashtable<>();
-    private Hashtable<String, Integer> secondChoice = new Hashtable<>();
-    private Hashtable<String, Integer> thirdChoice = new Hashtable<>();
+    private HashMap<String, Integer> firstChoice = new HashMap<>();
+    private HashMap<String, Integer> secondChoice = new HashMap<>();
+    private HashMap<String, Integer> thirdChoice = new HashMap<>();
 
     ElectionData() {
     }
@@ -21,7 +22,7 @@ class ElectionData {
             voteCount += firstChoice.get(key);
         }
         for (String key: ballot) {
-            if (firstChoice.get(key)/voteCount > 0.5) {
+            if (voteCount != 0 && firstChoice.get(key)/voteCount > 0.5) {
                 return key;
             }
         }
@@ -33,7 +34,8 @@ class ElectionData {
      * @return the name of the candidate that won
      */
     public String findWinnerMostPoints() {
-        int max = 0, sum = 0;
+        int max = 0; 
+        int sum = 0;
         String winner = ballot.get(0);
         for (String key: ballot) {
             sum += firstChoice.get(key)*3;
@@ -58,7 +60,6 @@ class ElectionData {
      * @throws DuplicateVotesException thrown if voter voted for a candidate more than once
      */
     public void processVote(String candidate1, String candidate2, String candidate3) throws UnknownCandidateException, DuplicateVotesException{
-
         if (!(ballot.contains(candidate1))) {
             throw new UnknownCandidateException(candidate1);
         }
@@ -77,11 +78,12 @@ class ElectionData {
         if (candidate2.equals(candidate3)) {
             throw new DuplicateVotesException(candidate2);
         }
-            firstChoice.put(candidate1, addCount(candidate1, firstChoice));
-            secondChoice.put(candidate2, addCount(candidate2, secondChoice));
-            thirdChoice.put(candidate3, addCount(candidate3, thirdChoice));
 
-            System.out.println("You voted for " + candidate1 + candidate2 + candidate3);
+        firstChoice.put(candidate1, addCount(candidate1, firstChoice));
+        secondChoice.put(candidate2, addCount(candidate2, secondChoice));
+        thirdChoice.put(candidate3, addCount(candidate3, thirdChoice));
+
+        System.out.println("You voted for: " + candidate1 + ", " + candidate2 + ", " + candidate3);
     }
 
     /**
@@ -117,7 +119,7 @@ class ElectionData {
      * @param votes the hashtable based on what choice the candidate was
      * @return the number of votes the candidate now has
      */
-    public int addCount(String key, Hashtable<String, Integer> votes) {
+    public int addCount(String key, HashMap<String, Integer> votes) {
         return votes.get(key)+1;
     }
 }
