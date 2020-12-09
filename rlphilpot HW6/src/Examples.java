@@ -145,5 +145,9 @@ public class Examples {
         ED.addCandidate("Lincoln");
         ED.addCandidate("Husky");
         ED.processVote("Lincoln", "Husky", "Lincoln");
+        System.out.println(new CandidateExistsException("Bob"));
+    }
+    public static void main(String[] args) {
+        System.out.println(new CandidateExistsException("Bob"));
     }
 }

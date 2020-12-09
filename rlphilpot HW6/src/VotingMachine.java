@@ -23,7 +23,7 @@ public class VotingMachine {
             electionData.processVote(candidate1, candidate2, candidate3);
         }
         catch (UnknownCandidateException e) {
-            System.out.println("This candidate currently does not exist. Would you like to add this candidate to the ballot?");
+            System.out.println(e.getCandidate() + " currently does not exist. Would you like to add this candidate to the ballot?");
             System.out.println("Enter 'Y' or 'y' for yes");
             String ans = keyboard.next();
             if (ans.equals("Y") || ans.equals("y")) {
